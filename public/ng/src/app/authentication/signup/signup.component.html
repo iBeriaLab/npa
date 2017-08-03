@@ -1,0 +1,49 @@
+<div class="d-flex align-items-stretch flex-nowrap min-height-100 h-100">
+  <div class="bg-cover bg-2 hidden-sm-down col-md-6 col-lg-8"></div>
+  <div class="card card-block mb-0 rounded-0 p-5 col-sm-12 col-md-6 col-lg-4">
+    <form (ngSubmit)="onSignup(f)" #f="ngForm">
+      <div class="mb-3">
+        <img src="assets/images/logo.png" class="avatar-xs mb-1" alt="">
+        <p class="ff-headers text-uppercase">Create an account</p>
+      </div>
+      <fieldset class="form-group">
+        <label for="name">
+          Choose a name
+        </label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="name">
+        <div class="form-control-feedback"></div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="email">
+          Choose a email
+        </label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="email" >
+        <div class="form-control-feedback"></div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <label for="password">
+          Enter your password
+        </label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="********">
+        <div class="form-control-feedback"></div>
+      </fieldset>
+      <fieldset class="form-group" >
+        <label for="password">
+          Confirm your password
+        </label>
+        <input type="password" class="form-control" placeholder="********">
+        <div class="form-control-feedback"></div>
+      </fieldset>
+      <label class="custom-control custom-checkbox mb-1">
+        <input type="checkbox" class="custom-control-input">
+        <span class="custom-control-indicator"></span>
+        <span class="custom-control-description">I have read and agree to the terms of service.</span>
+      </label>
+      <div class="block mb-3"></div>
+      <button class="btn btn-primary" type="submit">Create</button>
+      <a class="btn btn-outline-primary btn-link" [routerLink]="['/authentication/signin']">Login!</a>
+    </form>
+  </div>
+</div>
